@@ -9,9 +9,10 @@ source $HELPER_SCRIPTS/install.sh
 
 function InstallClang {
     local version=$1
+    local package_version=$2
 
     echo "Installing clang-$version..."
-    apt-get install -y "clang-$version" "lldb-$version" "lld-$version" "clang-format-$version" "clang-tidy-$version"
+    apt-get install -y "clang-$version=$package_version" "lldb-$version=$package_version" "lld-$version=$package_version" "clang-format-$version=$package_version" "clang-tidy-$version=$package_version"
 }
 
 function SetDefaultClang {
@@ -29,12 +30,14 @@ versions=$(get_toolset_value '.clang.versions[]')
 default_clang_version=$(get_toolset_value '.clang.default_version')
 
 for version in ${versions[*]}; do
+    package_version=$(get_toolset_value '.clang.packageVersions.'$version)
     if [[ $version != $default_clang_version ]]; then
-        InstallClang $version
+        InstallClang $version $package_version
     fi
 done
 
-InstallClang $default_clang_version
+package_version=$(get_toolset_value '.clang.packageVersions.'$default_clang_version)
+InstallClang $default_clang_version $package_version
 SetDefaultClang $default_clang_version
 
 invoke_tests "Tools" "clang"

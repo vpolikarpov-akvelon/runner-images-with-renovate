@@ -127,8 +127,17 @@
         },
         {
             "type": "file",
-            "source": "{{template_dir}}/toolsets/toolset-2004.json",
-            "destination": "{{user `installer_script_folder`}}/toolset.json"
+            "source": "{{template_dir}}/toolsets/toolset-2004.jsonc",
+            "destination": "{{user `installer_script_folder`}}/toolset.jsonc"
+        },
+        {
+            "type": "shell",
+            "inline": [
+                "$toolset = (Get-Content {{user `installer_script_folder`}}/toolset.jsonc | ConvertFrom-Json)",
+                "$toolset | ConvertTo-Json -Depth 10 | Out-File {{user `installer_script_folder`}}/toolset.json",
+                "Remove-Item {{user `installer_script_folder`}}/toolset.jsonc"
+            ],
+            "execute_command": "sudo sh -c '{{ .Vars }} pwsh -f {{ .Path }}'"
         },
         {
             "type": "shell",

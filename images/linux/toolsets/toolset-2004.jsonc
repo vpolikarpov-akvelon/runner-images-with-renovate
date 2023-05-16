@@ -2,23 +2,24 @@
     "toolcache": [
         {
             "name": "Python",
-            "url" : "https://raw.githubusercontent.com/actions/python-versions/main/versions-manifest.json",
-            "platform" : "linux",
+            "renovation_rule": "toolcache-github-releases",
+            "repo": "actions/python-versions",
+            "platform": "linux",
             "platform_version": "20.04",
             "arch": "x64",
             "versions": [
-                "3.6.*",
-                "3.7.*",
-                "3.8.*",
-                "3.9.*",
-                "3.10.*",
-                "3.11.*"
+                "3.6.15",
+                "3.7.16",
+                "3.8.16",
+                "3.9.16",
+                "3.10.11",
+                "3.11.3"
             ]
         },
         {
             "name": "PyPy",
             "arch": "x64",
-            "platform" : "linux",
+            "platform": "linux",
             "versions": [
                 "2.7",
                 "3.6",
@@ -29,42 +30,45 @@
         },
         {
             "name": "node",
-            "url" : "https://raw.githubusercontent.com/actions/node-versions/main/versions-manifest.json",
-            "platform" : "linux",
+            "renovation_rule": "toolcache-github-releases",
+            "repo": "actions/node-versions",
+            "platform": "linux",
             "arch": "x64",
             "versions": [
-                "14.*",
-                "16.*",
-                "18.*"
+                "14.21.3",
+                "16.20.0",
+                "18.16.0"
             ]
         },
         {
             "name": "go",
-            "url" : "https://raw.githubusercontent.com/actions/go-versions/main/versions-manifest.json",
+            "renovation_rule": "toolcache-github-releases",
+            "repo": "actions/go-versions",
             "arch": "x64",
-            "platform" : "linux",
+            "platform": "linux",
             "versions": [
-                "1.18.*",
-                "1.19.*",
-                "1.20.*"
+                "1.18.10",
+                "1.19.9",
+                "1.20.4"
             ],
             "default": "1.20.*"
         },
         {
             "name": "Ruby",
+            "renovation_rule": "toolcache-ruby",
             "platform_version": "20.04",
             "arch": "x64",
             "versions": [
-                "2.5.*",
-                "2.6.*",
-                "2.7.*",
-                "3.0.*",
-                "3.1.*"
+                "2.5.9",
+                "2.6.10",
+                "2.7.8",
+                "3.0.6",
+                "3.1.4"
             ]
         },
         {
             "name": "CodeQL",
-            "platform" : "linux",
+            "platform": "linux",
             "arch": "x64",
             "versions": [
                 "*"
@@ -110,10 +114,26 @@
         }
     },
     "powershellModules": [
-        {"name": "MarkdownPS"},
-        {"name": "Microsoft.Graph"},
-        {"name": "Pester"},
-        {"name": "PSScriptAnalyzer"}
+        {
+            "name": "MarkdownPS",
+            "repo": "Sarafian/MarkdownPS",
+            "version": "1.9"
+        },
+        {
+            "name": "Microsoft.Graph",
+            "version": "1.27.0",
+            "repo": "microsoftgraph/msgraph-sdk-powershell"
+        },
+        {
+            "repo": "pester/Pester",
+            "name": "Pester",
+            "version": "5.4.1"
+        },
+        {
+            "name": "PSScriptAnalyzer",
+            "repo": "PowerShell/PSScriptAnalyzer",
+            "version": "1.21.0"
+        }
     ],
     "azureModules": [
         {
@@ -277,11 +297,12 @@
         ]
     },
     "clang": {
-        "versions": [
-            "10",
-            "11",
-            "12"
-        ],
+        "versions": ["10", "11", "12"],
+        "packageVersions": {
+            "10": "1:10.0.0-4ubuntu1",        // renovate: datasource=repology depName=ubuntu_20_04/llvm-toolchain-10 versioning=deb
+            "11": "1:11.0.0-2~ubuntu20.04.1", // renovate: datasource=repology depName=ubuntu_20_04/llvm-toolchain-11 versioning=deb
+            "12": "1:12.0.0-3ubuntu1~20.04.5" // renovate: datasource=repology depName=ubuntu_20_04/llvm-toolchain-12 versioning=deb
+        },
         "default_version": "11"
     },
     "gcc": {
@@ -317,15 +338,18 @@
     "node_modules": [
         {
             "name": "grunt",
-            "command": "grunt"
+            "command": "grunt",
+            "version": "1.6.1"
         },
         {
             "name": "gulp",
-            "command": "gulp"
+            "command": "gulp",
+            "version": "4.0.2"
         },
         {
             "name": "n",
-            "command": "n"
+            "command": "n",
+            "version": "9.1.0"
         },
         {
             "name": "parcel",
