@@ -71,11 +71,20 @@
   ],
   "packageRules": [
     {
-      "matchPackageNames": ["Python","Ruby"],
+      "matchPackageNames": ["node"],
+      "separateMajorMinor": true
+    },
+    {
+      "matchPackageNames": ["node"],
+      "matchUpdateTypes": ["major"],
+      "enabled": false
+    },
+    {
+      "matchPackageNames": ["Python","Ruby", "go"],
       "separateMinorPatch": true
     },
     {
-      "matchPackageNames": ["Python","Ruby"],
+      "matchPackageNames": ["Python","Ruby", "go"],
       "matchUpdateTypes": ["major", "minor"],
       "enabled": false
     }
