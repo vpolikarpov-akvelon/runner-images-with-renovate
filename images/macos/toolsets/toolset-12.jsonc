@@ -224,7 +224,7 @@
             },
             {
                 "name": "gh",
-                "version": "2.28.0"  // renovate: datasource=repology depName=homebrew/github-cli
+                "version": "2.28.0"  // renovate: datasource=repology depName=homebrew/gh
             },
             {
                 "name": "gnupg",
@@ -296,7 +296,7 @@
             },
             {
                 "name": "tcl-tk",
-                "version": "8.6.13"  // renovate: datasource=repology depName=homebrew/tcltk
+                "version": "8.6.13"  // renovate: datasource=repology depName=homebrew/tcl-tk
             },
             {
                 "name": "r",
@@ -304,7 +304,7 @@
             },
             {
                 "name": "yq",
-                "version": "4.33.3"  // renovate: datasource=repology depName=homebrew/yq-mikefarah
+                "version": "4.33.3"  // renovate: datasource=repology depName=homebrew/yq
             },
             {
                 "name": "imagemagick",
