@@ -393,6 +393,6 @@
         "version": "14"
     },
     "pwsh": {
-        "version": "7.2.11"  // renovate: datasource=repology depName=aur/powershell-lts
+        "version": "7.2.11"  // renovate: datasource=repology depName=aur/powershell-lts-bin
     }
 }
