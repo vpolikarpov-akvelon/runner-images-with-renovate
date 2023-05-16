@@ -48,6 +48,10 @@
       "matchPackageNames": ["Python","Ruby", "go"],
       "matchUpdateTypes": ["major", "minor"],
       "enabled": false
+    },
+    {
+      "matchDepTypes": ["github-actions"],
+      "enabled": false
     }
   ]
 }
