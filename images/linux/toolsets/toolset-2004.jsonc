@@ -2,18 +2,16 @@
     "toolcache": [
         {
             "name": "Python",
-            "renovation_rule": "toolcache-github-releases",
-            "repo": "actions/python-versions",
             "platform": "linux",
             "platform_version": "20.04",
             "arch": "x64",
             "versions": [
-                "3.6.15",
-                "3.7.16",
-                "3.8.16",
-                "3.9.16",
-                "3.10.11",
-                "3.11.3"
+                "3.6.15",   // renovate:toolcache: name=Python repo=actions/python-versions
+                "3.7.16",   // renovate:toolcache: name=Python repo=actions/python-versions
+                "3.8.16",   // renovate:toolcache: name=Python repo=actions/python-versions
+                "3.9.16",   // renovate:toolcache: name=Python repo=actions/python-versions
+                "3.10.11",  // renovate:toolcache: name=Python repo=actions/python-versions
+                "3.11.3"    // renovate:toolcache: name=Python repo=actions/python-versions
             ]
         },
         {
@@ -30,40 +28,35 @@
         },
         {
             "name": "node",
-            "renovation_rule": "toolcache-github-releases",
-            "repo": "actions/node-versions",
             "platform": "linux",
             "arch": "x64",
             "versions": [
-                "14.21.3",
-                "16.20.0",
-                "18.16.0"
+                "14.21.3",  // renovate:toolcache: name=node repo=actions/node-versions
+                "16.20.0",  // renovate:toolcache: name=node repo=actions/node-versions
+                "18.16.0"   // renovate:toolcache: name=node repo=actions/node-versions
             ]
         },
         {
             "name": "go",
-            "renovation_rule": "toolcache-github-releases",
-            "repo": "actions/go-versions",
             "arch": "x64",
             "platform": "linux",
             "versions": [
-                "1.18.10",
-                "1.19.9",
-                "1.20.4"
+                "1.18.10",  // renovate:toolcache: name=go repo=actions/go-versions
+                "1.19.9",   // renovate:toolcache: name=go repo=actions/go-versions
+                "1.20.4"    // renovate:toolcache: name=go repo=actions/go-versions
             ],
             "default": "1.20.*"
         },
         {
             "name": "Ruby",
-            "renovation_rule": "toolcache-ruby",
             "platform_version": "20.04",
             "arch": "x64",
             "versions": [
-                "2.5.9",
-                "2.6.10",
-                "2.7.8",
-                "3.0.6",
-                "3.1.4"
+                "2.5.9",   // renovate: datasource=ruby-version depName=Ruby
+                "2.6.10",  // renovate: datasource=ruby-version depName=Ruby
+                "2.7.8",   // renovate: datasource=ruby-version depName=Ruby
+                "3.0.6",   // renovate: datasource=ruby-version depName=Ruby
+                "3.1.4"    // renovate: datasource=ruby-version depName=Ruby
             ]
         },
         {
@@ -116,23 +109,19 @@
     "powershellModules": [
         {
             "name": "MarkdownPS",
-            "repo": "Sarafian/MarkdownPS",
-            "version": "1.9"
+            "version": "1.9"  // renovate:pwsh-module: name=MarkdownPS repo=Sarafian/MarkdownPS
         },
         {
             "name": "Microsoft.Graph",
-            "version": "1.27.0",
-            "repo": "microsoftgraph/msgraph-sdk-powershell"
+            "version": "1.27.0"  // renovate:pwsh-module: name=Microsoft.Graph repo=microsoftgraph/msgraph-sdk-powershell
         },
         {
-            "repo": "pester/Pester",
             "name": "Pester",
-            "version": "5.4.1"
+            "version": "5.4.1"  // renovate:pwsh-module: name=Pester repo=pester/Pester
         },
         {
             "name": "PSScriptAnalyzer",
-            "repo": "PowerShell/PSScriptAnalyzer",
-            "version": "1.21.0"
+            "version": "1.21.0"  // renovate:pwsh-module: name=PSScriptAnalyzer repo=PowerShell/PSScriptAnalyzer
         }
     ],
     "azureModules": [
@@ -140,7 +129,7 @@
             "name": "az",
             "url" : "https://raw.githubusercontent.com/Azure/az-ps-module-versions/main/versions-manifest.json",
             "versions": [
-                "9.3.0"
+                "9.3.0"  // renovate:pwsh-module: name=AZ repo=Azure/az-ps-module-versions
             ],
             "zip_versions": [
                 "3.1.0",
@@ -339,53 +328,62 @@
         {
             "name": "grunt",
             "command": "grunt",
-            "version": "1.6.1"
+            "version": "1.6.1"  // renovate: datasource=npm depName=grunt
         },
         {
             "name": "gulp",
             "command": "gulp",
-            "version": "4.0.2"
+            "version": "4.0.2"  // renovate: datasource=npm depName=gulp
         },
         {
             "name": "n",
             "command": "n",
-            "version": "9.1.0"
+            "version": "9.1.0"  // renovate: datasource=npm depName=n
         },
         {
             "name": "parcel",
-            "command": "parcel"
+            "command": "parcel",
+            "version": "2.8.3"  // renovate: datasource=npm depName=parcel
         },
         {
             "name": "typescript",
-            "command": "tsc"
+            "command": "tsc",
+            "version": "5.0.4"  // renovate: datasource=npm depName=typescript
         },
         {
             "name": "newman",
-            "command": "newman"
+            "command": "newman",
+            "version": "5.3.2"  // renovate: datasource=npm depName=newman
         },
         {
             "name": "vercel",
-            "command": "vercel"
+            "command": "vercel",
+            "version": "29.1.1"  // renovate: datasource=npm depName=vercel
         },
         {
             "name": "webpack",
-            "command": "webpack"
+            "command": "webpack",
+            "version": "5.82.1"  // renovate: datasource=npm depName=webpack
         },
         {
             "name": "webpack-cli",
-            "command": "webpack-cli"
+            "command": "webpack-cli",
+            "version": "5.1.1"  // renovate: datasource=npm depName=webpack-cli
         },
         {
             "name": "netlify-cli",
-            "command": "netlify"
+            "command": "netlify",
+            "version": "15.0.0"  // renovate: datasource=npm depName=netlify-cli
         },
         {
             "name": "lerna",
-            "command": "lerna"
+            "command": "lerna",
+            "version": "6.6.2"  // renovate: datasource=npm depName=lerna
         },
         {
             "name": "yarn",
-            "command": "yarn"
+            "command": "yarn",
+            "version": "1.22.19"  // renovate: datasource=npm depName=yarn
         }
     ],
     "mongodb": {
@@ -395,6 +393,6 @@
         "version": "14"
     },
     "pwsh": {
-        "version": "7.2"
+        "version": "7.2.11"  // renovate: datasource=repology depName=aur/powershell-lts
     }
 }

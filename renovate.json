@@ -12,45 +12,8 @@
     },
     {
       "fileMatch": ["^images/linux/toolsets/toolset-2004.jsonc$"],
-      "matchStringsStrategy": "recursive",
       "matchStrings": [
-        "\"node_modules\":\\s*\\[[^\\]]*",
-        "\\{[^}]*\\},?",
-        "\"name\":\\s*\"(?<depName>.*)\"[^\"]*\"command\":\\s*\".*\"[^\"]*\"version\":\\s*\"(?<currentValue>.*)\""
-      ],
-      "datasourceTemplate": "npm"
-    },
-    {
-      "fileMatch": ["^images/linux/toolsets/toolset-2004.jsonc$"],
-      "matchStringsStrategy": "recursive",
-      "matchStrings": [
-        "\\{[^}]*\"renovation_rule\"\\s*:\\s*\"toolcache-github-releases\",[^}]*\\}",
-        "((\"name\"\\s*:\\s*\"(?<depName>[^\"]+?)\",?\\s*)|(\"repo\"\\s*:\\s*\"(?<packageName>[^\"]+?)\",?\\s*)|(\"versions\"\\s*:\\s*\\[[^]]*])|(\"[^\"]+\"\\s*:\\s*\"[^\"]+\",?\\s*))+",
-        "\"versions\"\\s*:\\s*\\[[^]]*]",
-        "\"(?<currentValue>[\\.0-9]+)\""
-      ],
-      "datasourceTemplate": "github-releases",
-      "versioningTemplate": "semver",
-      "extractVersionTemplate": "^v?(?<version>[\\.0-9]+)((-(?<prerelease>(alpha|beta)\\.[0-9]+))?-.+)?$"
-    },
-    {
-      "fileMatch": ["^images/linux/toolsets/toolset-2004.jsonc$"],
-      "matchStringsStrategy": "recursive",
-      "matchStrings": [
-        "\\{[^}]*\"renovation_rule\"\\s*:\\s*\"toolcache-ruby\",[^}]*\\}",
-        "((\"name\"\\s*:\\s*\"(?<depName>[^\"]+?)\",?\\s*)|(\"repo\"\\s*:\\s*\"(?<packageName>[^\"]+?)\",?\\s*)|(\"versions\"\\s*:\\s*\\[[^]]*])|(\"[^\"]+\"\\s*:\\s*\"[^\"]+\",?\\s*))+",
-        "\"versions\"\\s*:\\s*\\[[^]]*]",
-        "\"(?<currentValue>[\\.0-9]+)\""
-      ],
-      "datasourceTemplate": "ruby-version"
-    },
-    {
-      "fileMatch": ["^images/linux/toolsets/toolset-2004.jsonc$"],
-      "matchStringsStrategy": "recursive",
-      "matchStrings": [
-        "\"powershellModules\":\\s*\\[[^\\]]*",
-        "\\{[^}]*\"name\"\\s*:\\s*\"(?<depName>.*)\"[^}]*\\},?",
-        "((\"repo\"\\s*:\\s*\"(?<packageName>[^\"]+?)\",?\\s*)|(\"version\"\\s*:\\s*\"(?<currentValue>[^\"]+?)\",?\\s*)|(\"[^\"]+\"\\s*:\\s*\"[^\"]+\",?\\s*))+"
+        "\"(?<currentValue>[^\"]*?)\",?\\s*//\\s*renovate:pwsh-module: name=(?<depName>.*) repo=(?<packageName>.*?)\\s"
       ],
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "{{{ depName }}} PowerShell module",
@@ -60,13 +23,11 @@
     {
       "fileMatch": ["^images/linux/toolsets/toolset-2004.jsonc$"],
       "matchStrings": [
-        "\"name\": \"az\",\\s*\"url\" : \"[^\"]*\",\\s*\"versions\": \\[\\s*\"(?<currentValue>[^\"]*?)\""
+        "\"(?<currentValue>[^\"]*?)\",?\\s*//\\s*renovate:toolcache: name=(?<depName>.*) repo=(?<packageName>.*?)\\s"
       ],
       "datasourceTemplate": "github-releases",
-      "depNameTemplate": "Az PowerShell module",
-      "packageNameTemplate": "Azure/az-ps-module-versions",
-      "versioningTemplate": "loose",
-      "extractVersionTemplate": "^v?(?<version>[\\.0-9]+)(-.+)?$"
+      "versioningTemplate": "semver",
+      "extractVersionTemplate": "^v?(?<version>[\\.0-9]+)((-(?<prerelease>(alpha|beta)\\.[0-9]+))?-.+)?$"
     }
   ],
   "packageRules": [
