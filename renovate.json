@@ -5,13 +5,13 @@
   ],
   "regexManagers": [
     {
-      "fileMatch": ["^images/linux/toolsets/toolset-2004.json$"],
+      "fileMatch": ["^images/linux/toolsets/toolset-2004.jsonc$"],
       "matchStrings": [
         "\"(?<currentValue>[^\"]*?)\",?\\s*//\\s*renovate: datasource=(?<datasource>.*) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s"
       ]
     },
     {
-      "fileMatch": ["^images/linux/toolsets/toolset-2004.json$"],
+      "fileMatch": ["^images/linux/toolsets/toolset-2004.jsonc$"],
       "matchStringsStrategy": "recursive",
       "matchStrings": [
         "\"node_modules\":\\s*\\[[^\\]]*",
@@ -21,7 +21,7 @@
       "datasourceTemplate": "npm"
     },
     {
-      "fileMatch": ["^images/linux/toolsets/toolset-2004.json$"],
+      "fileMatch": ["^images/linux/toolsets/toolset-2004.jsonc$"],
       "matchStringsStrategy": "recursive",
       "matchStrings": [
         "\\{[^}]*\"renovation_rule\"\\s*:\\s*\"toolcache-github-releases\",[^}]*\\}",
@@ -34,7 +34,7 @@
       "extractVersionTemplate": "^v?(?<version>[\\.0-9]+)((-(?<prerelease>(alpha|beta)\\.[0-9]+))?-.+)?$"
     },
     {
-      "fileMatch": ["^images/linux/toolsets/toolset-2004.json$"],
+      "fileMatch": ["^images/linux/toolsets/toolset-2004.jsonc$"],
       "matchStringsStrategy": "recursive",
       "matchStrings": [
         "\\{[^}]*\"renovation_rule\"\\s*:\\s*\"toolcache-ruby\",[^}]*\\}",
@@ -45,7 +45,7 @@
       "datasourceTemplate": "ruby-version"
     },
     {
-      "fileMatch": ["^images/linux/toolsets/toolset-2004.json$"],
+      "fileMatch": ["^images/linux/toolsets/toolset-2004.jsonc$"],
       "matchStringsStrategy": "recursive",
       "matchStrings": [
         "\"powershellModules\":\\s*\\[[^\\]]*",
@@ -58,7 +58,7 @@
       "extractVersionTemplate": "^v?(?<version>[\\.0-9]+)(-.+)?$"
     },
     {
-      "fileMatch": ["^images/linux/toolsets/toolset-2004.json$"],
+      "fileMatch": ["^images/linux/toolsets/toolset-2004.jsonc$"],
       "matchStrings": [
         "\"name\": \"az\",\\s*\"url\" : \"[^\"]*\",\\s*\"versions\": \\[\\s*\"(?<currentValue>[^\"]*?)\""
       ],
