@@ -224,91 +224,91 @@
             },
             {
                 "name": "gh",
-                "version": ""
+                "version": "2.28.0"  // renovate: datasource=repology depName=homebrew/github-cli
             },
             {
                 "name": "gnupg",
-                "version": ""
+                "version": "2.4.1"  // renovate: datasource=repology depName=homebrew/gnupg
             },
             {
                 "name": "gnu-tar",
-                "version": ""
+                "version": "1.34"  // renovate: datasource=repology depName=homebrew/tar
             },
             {
                 "name": "kotlin",
-                "version": ""
+                "version": "1.8.21"  // renovate: datasource=repology depName=homebrew/kotlin
             },
             {
                 "name": "libpq",
-                "version": ""
+                "version": "14.7"  // renovate: datasource=repology depName=homebrew/postgresql
             },
             {
                 "name": "p7zip",
-                "version": ""
+                "version": "17.05"  // renovate: datasource=repology depName=homebrew/p7zip
             },
             {
                 "name": "packer",
-                "version": ""
+                "version": "1.8.6"  // renovate: datasource=repology depName=homebrew/packer
             },
             {
                 "name": "perl",
-                "version": ""
+                "version": "5.36.0"  // renovate: datasource=repology depName=homebrew/perl
             },
             {
                 "name": "pkg-config",
-                "version": ""
+                "version": "0.29.2"  // renovate: datasource=repology depName=homebrew/pkg-config
             },
             {
                 "name": "sbt",
-                "version": ""
+                "version": "1.8.2"  // renovate: datasource=repology depName=homebrew/sbt
             },
             {
                 "name": "subversion",
-                "version": ""
+                "version": "1.14.2"  // renovate: datasource=repology depName=homebrew/subversion
             },
             {
                 "name": "swiftformat",
-                "version": ""
+                "version": "0.51.9"  // renovate: datasource=repology depName=homebrew/swiftformat
             },
             {
                 "name": "swig",
-                "version": ""
+                "version": "4.1.1"  // renovate: datasource=repology depName=homebrew/swig
             },
             {
                 "name": "zstd",
-                "version": ""
+                "version": "1.5.5"  // renovate: datasource=repology depName=homebrew/zstd
             },
             {
                 "name": "gmp",
-                "version": ""
+                "version": "6.2.1"  // renovate: datasource=repology depName=homebrew/gmp
             },
             {
                 "name": "zlib",
-                "version": ""
+                "version": "1.2.13"  // renovate: datasource=repology depName=homebrew/zlib
             },
             {
                 "name": "libxext",
-                "version": ""
+                "version": "1.3.5"  // renovate: datasource=repology depName=homebrew/libxext
             },
             {
                 "name": "libxft",
-                "version": ""
+                "version": "2.3.8"  // renovate: datasource=repology depName=homebrew/libxft
             },
             {
                 "name": "tcl-tk",
-                "version": ""
+                "version": "8.6.13"  // renovate: datasource=repology depName=homebrew/tcltk
             },
             {
                 "name": "r",
-                "version": ""
+                "version": "4.3.0"  // renovate: datasource=repology depName=homebrew/r
             },
             {
                 "name": "yq",
-                "version": ""
+                "version": "4.33.3"  // renovate: datasource=repology depName=homebrew/yq-mikefarah
             },
             {
                 "name": "imagemagick",
-                "version": ""
+                "version": "7.1.1-8"  // renovate: datasource=repology depName=homebrew/imagemagick
             }
         ],
         "cask_packages": [
@@ -331,11 +331,11 @@
             "arch": "x64",
             "platform" : "darwin",
             "versions": [
-                "3.7.*",
-                "3.8.*",
-                "3.9.*",
-                "3.10.*",
-                "3.11.*"
+                "3.7.16",   // renovate:toolcache: name=Python repo=actions/python-versions
+                "3.8.16",   // renovate:toolcache: name=Python repo=actions/python-versions
+                "3.9.16",   // renovate:toolcache: name=Python repo=actions/python-versions
+                "3.10.11",  // renovate:toolcache: name=Python repo=actions/python-versions
+                "3.11.3"    // renovate:toolcache: name=Python repo=actions/python-versions
             ]
         },
         {
@@ -355,9 +355,9 @@
             "platform" : "darwin",
             "arch": "x64",
             "versions": [
-                "14.*",
-                "16.*",
-                "18.*"
+                "14.21.3",  // renovate:toolcache: name=node repo=actions/node-versions
+                "16.20.0",  // renovate:toolcache: name=node repo=actions/node-versions
+                "18.16.0"   // renovate:toolcache: name=node repo=actions/node-versions
             ]
         },
         {
@@ -367,18 +367,18 @@
             "platform" : "darwin",
             "variable_template" : "GOROOT_{0}_{1}_X64",
             "versions": [
-                "1.18.*",
-                "1.19.*",
-                "1.20.*"
+                "1.18.10",  // renovate:toolcache: name=go repo=actions/go-versions
+                "1.19.9",   // renovate:toolcache: name=go repo=actions/go-versions
+                "1.20.4"    // renovate:toolcache: name=go repo=actions/go-versions
             ]
         },
         {
             "name": "Ruby",
             "arch": "x64",
             "versions": [
-                "2.7.*",
-                "3.0.*",
-                "3.1.*"
+                "2.7.8",   // renovate: datasource=ruby-version depName=Ruby
+                "3.0.6",   // renovate: datasource=ruby-version depName=Ruby
+                "3.1.4"    // renovate: datasource=ruby-version depName=Ruby
             ]
         }
     ],
