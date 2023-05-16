@@ -170,10 +170,22 @@
         }
     },
     "powershellModules": [
-        { "name": "Az" },
-        { "name": "MarkdownPS" },
-        { "name": "Pester" },
-        { "name": "PSScriptAnalyzer" }
+        {
+            "name": "AZ",
+            "version": "9.7.1"  // renovate:pwsh-module: name=AZ repo=Azure/az-ps-module-versions
+        },
+        {
+            "name": "MarkdownPS",
+            "version": "1.9"  // renovate:pwsh-module: name=MarkdownPS repo=Sarafian/MarkdownPS
+        },
+        {
+            "name": "Pester",
+            "version": "5.4.1"  // renovate:pwsh-module: name=Pester repo=pester/Pester
+        },
+        {
+            "name": "PSScriptAnalyzer",
+            "version": "1.21.0"  // renovate:pwsh-module: name=PSScriptAnalyzer repo=PowerShell/PSScriptAnalyzer
+        }
     ],
     "npm": {
         "global_packages": [
@@ -182,35 +194,122 @@
     },
     "brew": {
         "common_packages": [
-            "ant",
-            "aria2",
-            "azure-cli",
-            "bazelisk",
-            "carthage",
-            "cmake",
-            "colima",
-            "gh",
-            "gnupg",
-            "gnu-tar",
-            "kotlin",
-            "libpq",
-            "p7zip",
-            "packer",
-            "perl",
-            "pkg-config",
-            "sbt",
-            "subversion",
-            "swiftformat",
-            "swig",
-            "zstd",
-            "gmp",
-            "zlib",
-            "libxext",
-            "libxft",
-            "tcl-tk",
-            "r",
-            "yq",
-            "imagemagick"
+            {
+                "name": "ant",
+                "version": "1.10.13"  // renovate: datasource=repology depName=homebrew/ant
+            },
+            {
+                "name": "aria2",
+                "version": "1.36.0"  // renovate: datasource=repology depName=homebrew/aria2
+            },
+            {
+                "name": "azure-cli",
+                "version": "2.48.1"  // renovate: datasource=repology depName=homebrew/azure-cli
+            },
+            {
+                "name": "bazelisk",
+                "version": "1.16.0"  // renovate: datasource=repology depName=homebrew/bazelisk
+            },
+            {
+                "name": "carthage",
+                "version": "0.39.0"  // renovate: datasource=repology depName=homebrew/carthage
+            },
+            {
+                "name": "cmake",
+                "version": "3.26.3"  // renovate: datasource=repology depName=homebrew/cmake
+            },
+            {
+                "name": "colima",
+                "version": "0.5.4"  // renovate: datasource=repology depName=homebrew/colima
+            },
+            {
+                "name": "gh",
+                "version": ""
+            },
+            {
+                "name": "gnupg",
+                "version": ""
+            },
+            {
+                "name": "gnu-tar",
+                "version": ""
+            },
+            {
+                "name": "kotlin",
+                "version": ""
+            },
+            {
+                "name": "libpq",
+                "version": ""
+            },
+            {
+                "name": "p7zip",
+                "version": ""
+            },
+            {
+                "name": "packer",
+                "version": ""
+            },
+            {
+                "name": "perl",
+                "version": ""
+            },
+            {
+                "name": "pkg-config",
+                "version": ""
+            },
+            {
+                "name": "sbt",
+                "version": ""
+            },
+            {
+                "name": "subversion",
+                "version": ""
+            },
+            {
+                "name": "swiftformat",
+                "version": ""
+            },
+            {
+                "name": "swig",
+                "version": ""
+            },
+            {
+                "name": "zstd",
+                "version": ""
+            },
+            {
+                "name": "gmp",
+                "version": ""
+            },
+            {
+                "name": "zlib",
+                "version": ""
+            },
+            {
+                "name": "libxext",
+                "version": ""
+            },
+            {
+                "name": "libxft",
+                "version": ""
+            },
+            {
+                "name": "tcl-tk",
+                "version": ""
+            },
+            {
+                "name": "r",
+                "version": ""
+            },
+            {
+                "name": "yq",
+                "version": ""
+            },
+            {
+                "name": "imagemagick",
+                "version": ""
+            }
         ],
         "cask_packages": [
             "julia",

@@ -160,6 +160,7 @@ should_build_from_source() {
 # Use the '--build-from-source' option to build from source in this case
 brew_smart_install() {
     local tool_name=$1
+    local tool_version=$2
 
     local os_name=$(get_brew_os_keyword)
     if [[ "$os_name" == "null" ]]; then
@@ -167,13 +168,18 @@ brew_smart_install() {
         exit 1
     fi
 
+    local tool_name_with_version=$tool_name
+    if [ -n "$tool_version" ]; then
+        tool_name_with_version="${tool_name}@${tool_version}"
+    fi
+
     local build_from_source=$(should_build_from_source "$tool_name" "$os_name")
     if $build_from_source; then
-        echo "Bottle of the $tool_name for the $os_name was not found. Building $tool_name from source..."
-        brew install --build-from-source $tool_name
+        echo "Bottle of the $tool_name_with_version for the $os_name was not found. Building $tool_name from source..."
+        brew install --build-from-source $tool_name_with_version
     else
-        echo "Downloading $tool_name..."
-        brew install $tool_name
+        echo "Downloading $tool_name_with_version..."
+        brew install $tool_name_with_version
     fi
 }
 

@@ -5,13 +5,13 @@
   ],
   "regexManagers": [
     {
-      "fileMatch": ["^images/linux/toolsets/toolset-2004.jsonc$"],
+      "fileMatch": ["^images/[a-z]*/toolsets/toolset-[0-9]*.jsonc$"],
       "matchStrings": [
         "\"(?<currentValue>[^\"]*?)\",?\\s*//\\s*renovate: datasource=(?<datasource>.*) depName=(?<depName>.*?)( versioning=(?<versioning>.*?))?\\s"
       ]
     },
     {
-      "fileMatch": ["^images/linux/toolsets/toolset-2004.jsonc$"],
+      "fileMatch": ["^images/[a-z]*/toolsets/toolset-[0-9]*.jsonc$"],
       "matchStrings": [
         "\"(?<currentValue>[^\"]*?)\",?\\s*//\\s*renovate:pwsh-module: name=(?<depName>.*) repo=(?<packageName>.*?)\\s"
       ],
@@ -21,7 +21,7 @@
       "extractVersionTemplate": "^v?(?<version>[\\.0-9]+)(-.+)?$"
     },
     {
-      "fileMatch": ["^images/linux/toolsets/toolset-2004.jsonc$"],
+      "fileMatch": ["^images/[a-z]*/toolsets/toolset-[0-9]*.jsonc$"],
       "matchStrings": [
         "\"(?<currentValue>[^\"]*?)\",?\\s*//\\s*renovate:toolcache: name=(?<depName>.*) repo=(?<packageName>.*?)\\s"
       ],

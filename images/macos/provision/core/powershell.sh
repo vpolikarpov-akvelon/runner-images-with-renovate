@@ -19,8 +19,8 @@ sudo installer -pkg /tmp/powershell.pkg -target /
 psModules=$(get_toolset_value '.powershellModules[].name')
 for module in ${psModules[@]}; do
     echo "Installing $module module"
-    moduleVersions="$(get_toolset_value ".powershellModules[] | select(.name==\"$module\") | .versions[]?")"
-    if [[ -z "$moduleVersions" ]];then
+    moduleVersion="$(get_toolset_value ".powershellModules[] | select(.name==\"$module\") | .version?")"
+    if [[ -z "$moduleVersion" ]];then
         # Check MacOS architecture and sudo on Arm64
         if [[ $arch == "arm64" ]]; then
             sudo pwsh -command "& {Install-Module $module -Force -Scope AllUsers}"
@@ -28,16 +28,14 @@ for module in ${psModules[@]}; do
             pwsh -command "& {Install-Module $module -Force -Scope AllUsers}"
         fi
     else
-        for version in ${moduleVersions[@]}; do
-            # Check MacOS architecture and sudo on Arm64
-            if [[ $arch == "arm64" ]]; then
-                echo " - $version"
-                sudo pwsh -command "& {Install-Module $module -RequiredVersion $version -Force -Scope AllUsers}"
-            else
-                echo " - $version"
-                pwsh -command "& {Install-Module $module -RequiredVersion $version -Force -Scope AllUsers}"
-            fi
-        done
+        # Check MacOS architecture and sudo on Arm64
+        if [[ $arch == "arm64" ]]; then
+            echo " - $moduleVersion"
+            sudo pwsh -command "& {Install-Module $module -RequiredVersion $moduleVersion -Force -Scope AllUsers}"
+        else
+            echo " - $moduleVersion"
+            pwsh -command "& {Install-Module $module -RequiredVersion $moduleVersion -Force -Scope AllUsers}"
+        fi
     fi
 done
 

@@ -4,10 +4,11 @@ source ~/utils/utils.sh
 # Monterey needs future review:
 # aliyun-cli, gnupg, helm have issues with building from the source code.
 # Added gmp for now, because toolcache ruby needs its libs. Remove it when php starts to build from source code.
-common_packages=$(get_toolset_value '.brew.common_packages[]')
+common_packages=$(get_toolset_value '.brew.common_packages[].name')
 for package in $common_packages; do
     echo "Installing $package..."
-    brew_smart_install "$package"
+    packageVersion="$(get_toolset_value ".brew.common_packages[] | select(.name==\"$package\") | .version?")"
+    brew_smart_install "$package" "$packageVersion"
 done
 
 cask_packages=$(get_toolset_value '.brew.cask_packages[]')

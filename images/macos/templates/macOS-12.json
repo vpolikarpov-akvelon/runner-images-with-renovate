@@ -95,8 +95,16 @@
         },
         {
             "type": "file",
-            "source": "./toolsets/toolset-12.json",
-            "destination": "~/image-generation/toolset.json"
+            "source": "./toolsets/toolset-12.jsonc",
+            "destination": "~/image-generation/toolset.jsonc"
+        },
+        {
+            "type": "shell",
+            "inline": [
+                "sed 's|\\(.*\\)\\s*//.*|\\1|' ~/image-generation/toolset.jsonc > ~/image-generation/toolset.json",
+                "rm ~/image-generation/toolset.jsonc"
+            ],
+            "execute_command": "sudo sh -c '{{ .Vars }} {{ .Path }}'"
         },
         {
             "type": "shell",
